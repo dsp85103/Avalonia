@@ -25,7 +25,7 @@ namespace Avalonia.Controls.UnitTests
 
             target.SelectedItem = "Foo";
 
-            target.Presenter.Panel.Children[1].RaiseEvent(new GotFocusEventArgs
+            target.Presenter.RealizedElements.ElementAt(1).RaiseEvent(new GotFocusEventArgs
             {
                 RoutedEvent = InputElement.GotFocusEvent,
                 NavigationMethod = NavigationMethod.Directional,
@@ -49,7 +49,7 @@ namespace Avalonia.Controls.UnitTests
 
             target.SelectedItem = "Foo";
 
-            target.Presenter.Panel.Children[1].RaiseEvent(new GotFocusEventArgs
+            target.Presenter.RealizedElements.ElementAt(1).RaiseEvent(new GotFocusEventArgs
             {
                 RoutedEvent = InputElement.GotFocusEvent,
                 NavigationMethod = NavigationMethod.Directional,
@@ -74,7 +74,7 @@ namespace Avalonia.Controls.UnitTests
             target.SelectedItems.Add("Foo");
             target.SelectedItems.Add("Bar");
 
-            target.Presenter.Panel.Children[0].RaiseEvent(new GotFocusEventArgs
+            target.Presenter.RealizedElements.ElementAt(1).RaiseEvent(new GotFocusEventArgs
             {
                 RoutedEvent = InputElement.GotFocusEvent,
                 NavigationMethod = NavigationMethod.Directional,
